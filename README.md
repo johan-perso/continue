@@ -2,7 +2,10 @@
 
 Une application permettant de gérer votre appareil Android depuis votre Mac. Vous pourrez ainsi gérer la musique jouée, les sites récemment visités et le presse-papier du téléphone.
 
-<!-- TODO: faire les screens -->
+Gestion de la musique      |  Onglets dans le navigateur  | Presse papier            
+:-------------------------:|:----------------------------:|:-------------------------:
+![player](https://github.com/johan-perso/continue/assets/41506568/eea28e5a-475b-42a4-bf79-73f14db83cab)  |  ![tabs](https://github.com/johan-perso/continue/assets/41506568/23b9be6e-b09b-4b14-9209-649cb13f83c2) | ![clipboard](https://github.com/johan-perso/continue/assets/41506568/fb25ebdb-c10b-42b6-a0b5-b9e45bfb74df)
+
 
 ## Installation
 
@@ -26,7 +29,7 @@ xattr -cr /Applications/Continue.app
 
 ## Installation sur Android
 
-Dans la soirée si j'ai le temps 🔥
+Avant le 20 mai
 
 
 ## Licence
