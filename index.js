@@ -9,6 +9,11 @@ var applescript
 process.on("uncaughtException", err => {
 	console.error("uncaughtException:")
 	console.error(err)
+	try {
+		showNotification("Erreur non reconnue", err.message || err.toString())
+	} catch(e){
+		console.error("Impossible d'afficher une notification concernant cette exception:", e)
+	}
 })
 
 // Si l'appli est déjà ouverte en arrière plan, on la focus
@@ -265,7 +270,8 @@ async function main(){
 					click: () => {
 						app.setLoginItemSettings({
 							openAtLogin: true,
-							name: "Continue"
+							name: "Continue",
+							path: app.getPath("exe")
 						})
 					}
 				},
@@ -491,8 +497,4 @@ app.whenReady().then(async () => {
 
 	// Masquer l'app du dock
 	if(process.platform == "darwin") app.dock.hide()
-
-	app.on("activate", () => { // nécessaire pour macOS
-		if(ElectronBrowserWindow.getAllWindows().length === 0) main()
-	})
 })
